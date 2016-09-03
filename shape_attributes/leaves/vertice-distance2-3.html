@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Validation</title>
+   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   <script type="text/javascript" src="jquery.maphilight.min.js"></script>
+   <script type="text/javascript">$.fn.maphilight.defaults = {
+          fill: true,
+          fillColor: 'ffffff',
+          fillOpacity: 0.9,
+          stroke: true,
+          strokeColor: '000000',
+          strokeOpacity: 1,
+          strokeWidth: 3,
+          fade: true,
+          alwaysOn: false,
+          neverOn: false,
+          groupBy: false,
+          wrapClass: true,
+          shadow: false,
+          shadowX: 0,
+          shadowY: 0,
+          shadowRadius: 6,
+          shadowColor: '000000',
+          shadowOpacity: 0.8,
+          shadowPosition: 'outside',
+          shadowFrom: false
+      }
+      $(function() {
+          $('.map').maphilight();
+      });</script>
+</head>
+<body>
+<table>
+<tr><th>Vertices from polygon approximation at maximum allowed error 2 (mouse over vertices for details)</th><th>Boundary of segment</th><th>Segment</th><th>Grayscale</th></tr>
+<tr><td width="10" valign="center"><img class="map" src="vertice-distance2-large3.png" usemap="#the_map">
+<map name="the_map">
+<area id="map0" href="#vertice0" title="vertice 0: row 8, column 434, innerAngleInDegrees: 2.9, distanceToNextVertex: 35.9" shape="circle" coords="43, 22, 20">
+<area id="map1" href="#vertice1" title="vertice 1: row 43, column 442, innerAngleInDegrees: 193.1, distanceToNextVertex: 25.0" shape="circle" coords="76, 165, 20">
+<area id="map2" href="#vertice2" title="vertice 2: row 68, column 442, innerAngleInDegrees: 197.1, distanceToNextVertex: 13.6" shape="circle" coords="76, 267, 20">
+<area id="map3" href="#vertice3" title="vertice 3: row 81, column 438, innerAngleInDegrees: 195.4, distanceToNextVertex: 16.6" shape="circle" coords="59, 320, 20">
+<area id="map4" href="#vertice4" title="vertice 4: row 95, column 429, innerAngleInDegrees: 4.0, distanceToNextVertex: 20.0" shape="circle" coords="22, 378, 20">
+<area id="map5" href="#vertice5" title="vertice 5: row 79, column 441, innerAngleInDegrees: 157.0, distanceToNextVertex: 20.6" shape="circle" coords="71, 312, 20">
+<area id="map6" href="#vertice6" title="vertice 6: row 59, column 446, innerAngleInDegrees: 162.1, distanceToNextVertex: 32.1" shape="circle" coords="92, 231, 20">
+<area id="map7" href="#vertice7" title="vertice 7: row 27, column 444, innerAngleInDegrees: 165.0, distanceToNextVertex: 19.0" shape="circle" coords="84, 100, 20">
+<area id="map8" href="#vertice8" title="vertice 8: row 9, column 438, innerAngleInDegrees: 3.4, distanceToNextVertex: 19.6" shape="circle" coords="59, 27, 20">
+<area id="map9" href="#vertice9" title="vertice 9: row 28, column 443, innerAngleInDegrees: 216.6, distanceToNextVertex: 5.4" shape="circle" coords="80, 104, 20">
+<area id="map10" href="#vertice10" title="vertice 10: row 33, column 441, innerAngleInDegrees: 322.6, distanceToNextVertex: 26.0" shape="circle" coords="71, 124, 20">
+</map>
+</td><td valign="center" width="10"><a href="boundary3.png"><img class="map" src="boundary3-w-114.png" usemap="#the_map"></a></td><td valign="center"><a href="segment3.png"><img class="map" src="segment3-w-114.png" usemap="#the_map"></a></td><td><a href="original-close3.png"><img class="map" src="original-close3-w-114.png" usemap="#the_map"></a></td></tr></table><br><br>
+</body>
+</html>

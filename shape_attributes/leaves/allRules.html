@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Validation</title>
+   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   <script type="text/javascript" src="canvas_clickable_ids.js"></script>
+</head>
+<body>
+<b>Attribute Values: </b>Click on a segment to see its attributes displayed in the bottom frame<br><table cellspacing=10>
+<tr><td><a name="segment0"></a></td></tr>
+<tr><th>RGB</th><th>Grayscale</th><th>Convexity and No Hole</th><th>Elongatedness</th><th>Polygon-Based Approximate Rectangularity</th><th>Roundness and No Hole</th><th>Simple-Connectivity</th><th>Straightness of Boundary</th><th>Angle of MER (in degrees)</th><th width="100">Area (in pixels)</th><th>Average Contrast Along Boundary</th><th>Morphological Multiscale Characteristic</th><th>Mean Grayscale Intensity</th></tr>
+<tr><td valign="top"><canvas src="other-w-300.png" width="300" height="250"></canvas></td><td valign="top"><canvas src="original-w-300.png" width="300" height="250"></canvas></td></td><td valign="top"><canvas src="fCnvxtyAndNoHole-color-w-300.png" width="300" height="250"></canvas><img src="fCnvxtyAndNoHole-bar-w-300.png"></td><td valign="top"><canvas src="fElngtdnss-color-w-300.png" width="300" height="250"></canvas><img src="fElngtdnss-bar-w-300.png"></td><td valign="top"><canvas src="fApproximateRectangularityShackAndDavis-color-w-300.png" width="300" height="250"></canvas><img src="fApproximateRectangularityShackAndDavis-bar-w-300.png"></td><td valign="top"><canvas src="fRndnssAndNoHole-color-w-300.png" width="300" height="250"></canvas><img src="fRndnssAndNoHole-bar-w-300.png"></td><td valign="top"><canvas src="fCombinedSmplConnctivty-color-w-300.png" width="300" height="250"></canvas><img src="fCombinedSmplConnctivty-bar-w-300.png"></td><td valign="top"><canvas src="fStrghtnssOfBoundrs-color-w-300.png" width="300" height="250"></canvas><img src="fStrghtnssOfBoundrs-bar-w-300.png"></td><td valign="top"><canvas src="fAnglOrntdMERInDegree-color-w-300.png" width="300" height="250"></canvas><img src="fAnglOrntdMERInDegree-bar-w-300.png"></td><td valign="top"><canvas src="iArea-color-w-300.png" width="300" height="250"></canvas><img src="iArea-bar-w-300.png"></td><td valign="top"><canvas src="fAverageContrastAlongBoundary-color-w-300.png" width="300" height="250"></canvas><img src="fAverageContrastAlongBoundary-bar-w-300.png"></td><td valign="top"><canvas src="fAvrgDMPScale-color-w-300.png" width="300" height="250"></canvas><img src="fAvrgDMPScale-bar-w-300.png"></td><td valign="top"><canvas src="fMean-color-w-300.png" width="300" height="250"></canvas><img src="fMean-bar-w-300.png"></td></tr>
+<tr><td width="10" colspan="4">Jump to segment number: <a id="1" href="ruleTable3.html#segment1" target="theFrame">1</a>&nbsp; 
+<a id="2" href="ruleTable3.html#segment2" target="theFrame">2</a>&nbsp; 
+<a id="3" href="ruleTable5.html#segment3" target="theFrame">3</a>&nbsp; 
+<a id="4" href="ruleTable0.html#segment4" target="theFrame">4</a>&nbsp; 
+<a id="5" href="ruleTable4.html#segment5" target="theFrame">5</a>&nbsp; 
+<a id="6" href="ruleTable3.html#segment6" target="theFrame">6</a>&nbsp; 
+<a id="7" href="ruleTable5.html#segment7" target="theFrame">7</a>&nbsp; 
+<a id="8" href="ruleTable0.html#segment8" target="theFrame">8</a>&nbsp; 
+<a id="9" href="ruleTable3.html#segment9" target="theFrame">9</a>&nbsp; 
+<a id="10" href="ruleTable2.html#segment10" target="theFrame">10</a>&nbsp; 
+<a id="11" href="ruleTable5.html#segment11" target="theFrame">11</a>&nbsp; 
+<a id="12" href="ruleTable4.html#segment12" target="theFrame">12</a>&nbsp; 
+<a id="13" href="ruleTable5.html#segment13" target="theFrame">13</a>&nbsp; 
+<a id="14" href="ruleTable2.html#segment14" target="theFrame">14</a>&nbsp; 
+<a id="15" href="ruleTable2.html#segment15" target="theFrame">15</a>&nbsp; 
+<a id="16" href="ruleTable4.html#segment16" target="theFrame">16</a>&nbsp; 
+<a id="17" href="ruleTable3.html#segment17" target="theFrame">17</a>&nbsp; 
+<a id="18" href="ruleTable1.html#segment18" target="theFrame">18</a>&nbsp; 
+<a id="19" href="ruleTable2.html#segment19" target="theFrame">19</a>&nbsp; 
+<a id="20" href="ruleTable4.html#segment20" target="theFrame">20</a>&nbsp; 
+<a id="21" href="ruleTable1.html#segment21" target="theFrame">21</a>&nbsp; 
+<a id="22" href="ruleTable1.html#segment22" target="theFrame">22</a>&nbsp; 
+<a id="23" href="ruleTable1.html#segment23" target="theFrame">23</a>&nbsp; 
+<a id="24" href="ruleTable4.html#segment24" target="theFrame">24</a>&nbsp; 
+<a id="25" href="ruleTable0.html#segment25" target="theFrame">25</a>&nbsp; 
+<a id="26" href="ruleTable1.html#segment26" target="theFrame">26</a>&nbsp; 
+<a id="27" href="ruleTable0.html#segment27" target="theFrame">27</a>&nbsp; 
+<a id="28" href="ruleTable2.html#segment28" target="theFrame">28</a>&nbsp; 
+<a id="29" href="ruleTable5.html#segment29" target="theFrame">29</a>&nbsp; 
+<a id="30" href="ruleTable0.html#segment30" target="theFrame">30</a>&nbsp; 
+</td></tr></table>
+<canvas id="hiddenCanvas" src="ids-resized.png"  width="300" height="250" style="display: none;"></canvas></body>
+</html>
