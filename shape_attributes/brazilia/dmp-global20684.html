@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Validation</title>
+   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   <script type="text/javascript">
+  $(function() {
+    var img = new Image();
+    img.src = 'large-dmp-global-max-scales20684.png';
+
+    var raw_img = new Image();
+    raw_img.src = 'large-dmp-global-max-scales-raw20684.png';
+
+    window.onload = function(){
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+        context.drawImage(img, 0, 0, 500, 426);
+
+        var hidden_canvas = document.getElementById('hiddenCanvas');
+        var hidden_context = hidden_canvas.getContext('2d');
+        hidden_context.drawImage(raw_img, 0, 0, 500, 426);
+    };
+
+    function findPos(obj){
+    var current_left = 0, current_top = 0;
+    if (obj.offsetParent){
+        do{
+            current_left += obj.offsetLeft;
+            current_top += obj.offsetTop;
+        }while(obj = obj.offsetParent);
+        return {x: current_left, y: current_top};
+    }
+    return undefined;
+    };
+
+    function updateTooltip(obj, e) {
+      var position = findPos(obj);
+      var x = e.pageX - position.x;
+      var y = e.pageY - position.y;
+      var coordinate = "x=" + x + ", y=" + y;
+      //var canvas = $('#hiddenCanvas').getContext('2d');
+      var canvas = document.getElementById('hiddenCanvas').getContext('2d');
+      //var canvas = obj.getContext('2d');
+      var p = canvas.getImageData(x - 1, y - 1, 1, 1).data;
+      var tooltipX = e.pageX + 16;
+      var tooltipY = e.pageY + 16;
+      $('div.tooltip').remove();
+      $('<div class="tooltip" style="position: absolute; background-color:yellow;"></div>')
+          .appendTo('body');
+      $('div.tooltip').css({top: tooltipY, left: tooltipX});
+      var val = (p[1] * 256 + p[2]);
+      if (p[0] == 1){
+          val = - val;
+      }
+      $('div.tooltip').html(val.toString());
+    };
+
+    $('#myCanvas').mousemove(function(e){
+	  updateTooltip(this, e);
+    }).mouseenter(function(e){
+	  updateTooltip(this, e);
+    }).mouseleave(function(e){
+	  $('div.tooltip').remove();
+    });
+
+});
+   </script>
+</head>
+<body>
+<table>
+<tr><th>Segment (in red)</th><th>Panchromatic</th><th>Morphological Multiscale Characteristic Image (Mouse over for values. Positive values indicate the original pixel was brighter than its surrounding while negative values indicate the converse.)</th></tr>
+<tr><td><a href="dmp-segment-overlay20684.png"><img src="dmp-segment-overlay20684.png"></a></td><td><a href="original20684.png"><img src="original20684.png"></a></td><td valign="center" width="10">
+<canvas id="myCanvas" width="500" height="426"></canvas></td>
+</tr>
+</table>
+<canvas id="hiddenCanvas" width="500" height="426" style="visibility: hidden;"></canvas></body>
+</html>

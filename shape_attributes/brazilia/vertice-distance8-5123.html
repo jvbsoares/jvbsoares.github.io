@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Validation</title>
+   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   <script type="text/javascript" src="jquery.maphilight.min.js"></script>
+   <script type="text/javascript">$.fn.maphilight.defaults = {
+          fill: true,
+          fillColor: 'ffffff',
+          fillOpacity: 0.9,
+          stroke: true,
+          strokeColor: '000000',
+          strokeOpacity: 1,
+          strokeWidth: 3,
+          fade: true,
+          alwaysOn: false,
+          neverOn: false,
+          groupBy: false,
+          wrapClass: true,
+          shadow: false,
+          shadowX: 0,
+          shadowY: 0,
+          shadowRadius: 6,
+          shadowColor: '000000',
+          shadowOpacity: 0.8,
+          shadowPosition: 'outside',
+          shadowFrom: false
+      }
+      $(function() {
+          $('.map').maphilight();
+      });</script>
+</head>
+<body>
+<table>
+<tr><th>Vertices from polygon approximation at maximum allowed error 8 (mouse over vertices for details)</th><th>Boundary of segment</th><th>Segment</th><th>Panchromatic</th></tr>
+<tr><td width="10" valign="center"><img class="map" src="vertice-distance8-large5123.png" usemap="#the_map">
+<map name="the_map">
+<area id="map0" href="#vertice0" title="vertice 0: row 129, column 352, innerAngleInDegrees: 0.0, distanceToNextVertex: 76.7" shape="circle" coords="26, 31, 23">
+<area id="map1" href="#vertice1" title="vertice 1: row 149, column 426, innerAngleInDegrees: 0.0, distanceToNextVertex: 76.7" shape="circle" coords="374, 125, 23">
+</map>
+</td><td valign="center" width="10"><a href="boundary5123.png"><img class="map" src="boundary5123-w-400.png" usemap="#the_map"></a></td><td valign="center"><a href="segment5123.png"><img class="map" src="segment5123-w-400.png" usemap="#the_map"></a></td><td><a href="original-close5123.png"><img class="map" src="original-close5123-w-400.png" usemap="#the_map"></a></td></tr></table><br><br>
+</body>
+</html>

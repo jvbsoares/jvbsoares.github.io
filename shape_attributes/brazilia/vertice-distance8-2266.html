@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Validation</title>
+   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   <script type="text/javascript" src="jquery.maphilight.min.js"></script>
+   <script type="text/javascript">$.fn.maphilight.defaults = {
+          fill: true,
+          fillColor: 'ffffff',
+          fillOpacity: 0.9,
+          stroke: true,
+          strokeColor: '000000',
+          strokeOpacity: 1,
+          strokeWidth: 3,
+          fade: true,
+          alwaysOn: false,
+          neverOn: false,
+          groupBy: false,
+          wrapClass: true,
+          shadow: false,
+          shadowX: 0,
+          shadowY: 0,
+          shadowRadius: 6,
+          shadowColor: '000000',
+          shadowOpacity: 0.8,
+          shadowPosition: 'outside',
+          shadowFrom: false
+      }
+      $(function() {
+          $('.map').maphilight();
+      });</script>
+</head>
+<body>
+<table>
+<tr><th>Vertices from polygon approximation at maximum allowed error 8 (mouse over vertices for details)</th><th>Boundary of segment</th><th>Segment</th><th>Panchromatic</th></tr>
+<tr><td width="10" valign="center"><img class="map" src="vertice-distance8-large2266.png" usemap="#the_map">
+<map name="the_map">
+<area id="map0" href="#vertice0" title="vertice 0: row 44, column 358, innerAngleInDegrees: 44.7, distanceToNextVertex: 18.4" shape="circle" coords="30, 35, 27">
+<area id="map1" href="#vertice1" title="vertice 1: row 62, column 362, innerAngleInDegrees: 68.8, distanceToNextVertex: 14.4" shape="circle" coords="51, 132, 27">
+<area id="map2" href="#vertice2" title="vertice 2: row 54, column 374, innerAngleInDegrees: 246.9, distanceToNextVertex: 56.3" shape="circle" coords="116, 89, 27">
+<area id="map3" href="#vertice3" title="vertice 3: row 85, column 421, innerAngleInDegrees: 359.8, distanceToNextVertex: 75.2" shape="circle" coords="370, 257, 27">
+</map>
+</td><td valign="center" width="10"><a href="boundary2266.png"><img class="map" src="boundary2266-w-400.png" usemap="#the_map"></a></td><td valign="center"><a href="segment2266.png"><img class="map" src="segment2266-w-400.png" usemap="#the_map"></a></td><td><a href="original-close2266.png"><img class="map" src="original-close2266-w-400.png" usemap="#the_map"></a></td></tr></table><br><br>
+</body>
+</html>
